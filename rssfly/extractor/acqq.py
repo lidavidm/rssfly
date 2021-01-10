@@ -24,6 +24,10 @@ logger = structlog.get_logger(__name__)
 
 class AcqqExtractor(Extractor):
     @property
+    def name(self):
+        return "acqq"
+
+    @property
     def publisher(self):
         return "腾讯动漫"
 

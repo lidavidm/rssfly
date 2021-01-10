@@ -24,6 +24,10 @@ logger = structlog.get_logger(__name__)
 
 class TappytoonExtractor(Extractor):
     @property
+    def name(self):
+        return "tappytoon"
+
+    @property
     def publisher(self):
         return "Tappytoon"
 

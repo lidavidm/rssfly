@@ -1,5 +1,6 @@
 alembic==1.4.3
 beautifulsoup4==4.9.3
+environs==9.3.0
 Flask==1.1.2
 flask-sqlalchemy==2.4.4
 uWSGI==2.0.19.1

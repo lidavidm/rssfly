@@ -14,7 +14,9 @@
 
 import datetime
 
+import flask
 import requests
+import structlog
 from flask import make_response, render_template
 
 import rssfly.model as model
@@ -23,45 +25,20 @@ from rssfly.extractor import acqq, tappytoon
 from rssfly.extractor.common import Comic, Context
 from rssfly.reconcile import reconcile
 
+logger = structlog.get_logger(__name__)
 
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
-
-
-@app.route("/acqq/<comic_id>")
-def extract_acqq(comic_id):
-    extractor = acqq.AcqqExtractor()
-    existing = []
-    existing_comic = model.load_comic(publisher=extractor.publisher, comic_id=comic_id)
-    if existing_comic:
-        existing = existing_comic.chapters
-    with requests.Session() as session:
-        context = Context(session)
-        comic = extractor.extract(context, comic_id)
-        reconciled = reconcile(existing, comic.chapters, now=datetime.datetime.now())
-        comic = Comic(
-            publisher=comic.publisher,
-            comic_id=comic.comic_id,
-            name=comic.name,
-            url=comic.url,
-            chapters=reconciled,
-        )
-        model.save_comic(comic)
-    response = make_response(
-        render_template(
-            "feed.xml",
-            comic=comic,
-            latest=max(comic.chapters, key=lambda chapter: chapter.published),
-        )
-    )
-    response.headers["Content-Type"] = "application/atom+xml"
-    return response
+extractors = {}
+for instance in [acqq.AcqqExtractor(), tappytoon.TappytoonExtractor()]:
+    extractors[instance.name] = instance
+    logger.info("Registered extractor", name=instance.name)
 
 
-@app.route("/tappytoon/<comic_id>")
-def extract_tappytoon(comic_id):
-    extractor = tappytoon.TappytoonExtractor()
+@app.route("/feed/<extractor>/<comic_id>.xml")
+def feed(extractor, comic_id):
+    extractor = extractors.get(extractor)
+    if not extractor:
+        return flask.abort(404)
+
     existing = []
     existing_comic = model.load_comic(publisher=extractor.publisher, comic_id=comic_id)
     if existing_comic:

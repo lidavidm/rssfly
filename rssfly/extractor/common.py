@@ -46,6 +46,11 @@ class Comic(NamedTuple):
 class Extractor:
     @property
     @abc.abstractmethod
+    def name(self):
+        raise NotImplementedError
+
+    @property
+    @abc.abstractmethod
     def publisher(self):
         raise NotImplementedError
 

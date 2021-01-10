@@ -12,15 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import os
+from environs import Env
 
-from flask import Flask
+env = Env()
+env.read_env()
 
-import rssfly.config
-
-app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = rssfly.config.DATABASE_URL
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
-
-import rssfly.model
-import rssfly.routes
+DATABASE_URL = env.str("RSSFLY_DB")
