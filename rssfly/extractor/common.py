@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import abc
 from typing import List, NamedTuple
 
 import requests
@@ -28,13 +29,26 @@ class Context:
 
 
 class Chapter(NamedTuple):
-    id: str
+    chapter_id: str
     name: str
     url: str
     # TODO: optional date?
 
 
 class Comic(NamedTuple):
-    id: str
+    publisher: str
+    comic_id: str
     name: str
+    url: str
     chapters: List[Chapter]
+
+
+class Extractor:
+    @property
+    @abc.abstractmethod
+    def publisher(self):
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def extract(self, context: Context, comic_id: str) -> Comic:
+        raise NotImplementedError

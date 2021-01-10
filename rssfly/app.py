@@ -12,11 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import os
+
 from flask import Flask
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = os.environ.get("RSSFLY_DB")
 
-
-@app.route("/")
-def hello_world():
-    return "Hello, World!"
+import rssfly.model
+import rssfly.routes

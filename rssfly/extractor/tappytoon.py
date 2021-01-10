@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-import urllib.parse
+import json
 
 import structlog
 from bs4 import BeautifulSoup
@@ -22,23 +22,23 @@ from rssfly.extractor.common import Chapter, Comic, Context, Extractor
 logger = structlog.get_logger(__name__)
 
 
-class AcqqExtractor(Extractor):
+class TappytoonExtractor(Extractor):
     @property
     def publisher(self):
-        return "腾讯动漫"
+        return "Tappytoon"
 
     def extract(self, context: Context, comic_id: str) -> Comic:
-        url = f"https://ac.qq.com/Comic/comicInfo/id/{comic_id}"
-        logger.info("Fetching from ac.qq.com", url=url)
+        url = f"https://www.tappytoon.com/en/comics/{comic_id}"
+        logger.info("Fetching from tappytoon.com", url=url)
         raw_text = context.get_text(url)
         root = BeautifulSoup(raw_text, features="html.parser")
-        chapter_els = root.find_all(class_="works-chapter-item")
+        data = json.loads(root.find("script", id="__NEXT_DATA__").string)
         chapters = {}
-        for chapter_el in chapter_els:
-            link = chapter_el.find("a")
-            chapter_title = link.attrs["title"]
-            chapter_url = urllib.parse.urljoin(url, link.attrs["href"])
-            chapter_id = "{:09}".format(int(link.attrs["href"].split("/")[-1]))
+        chapter_data = data["props"]["initialState"]["entities"]["chapters"]
+        for chapter in chapter_data.values():
+            chapter_id = "{:09}".format(chapter["order"])
+            chapter_title = chapter["title"]
+            chapter_url = f"https://www.tappytoon.com/en/chapters/{chapter['id']}"
             # Deduplicate by URL
             chapters[chapter_url] = Chapter(
                 chapter_id=chapter_id,
@@ -48,7 +48,9 @@ class AcqqExtractor(Extractor):
         chapter_list = list(
             sorted(chapters.values(), key=lambda chapter: int(chapter.chapter_id))
         )
-        comic_name = root.find(class_="works-intro-title").text
+        comic_data = data["props"]["initialState"]["entities"]["comics"]
+        comic_data = comic_data[next(iter(comic_data.keys()))]
+        comic_name = comic_data["title"]
         return Comic(
             publisher=self.publisher,
             comic_id=comic_id,

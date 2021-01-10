@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>{{ comic.name }}</title>
+  <id>{{ comic.url }}</id>
+  <updated>{{ latest.published.isoformat() }}Z</updated>
+  {% for chapter in comic.chapters %}
+  <entry>
+    <author><name>{{ comic.publisher }}</name></author>
+    <title>{{ chapter.name }}</title>
+    <link href="{{ chapter.url }}" />
+    <id>{{ chapter.url }}</id>
+    <updated>{{ chapter.published.isoformat() }}Z</updated>
+    <content>
+      {{ comic.name }} - {{ chapter.name }}
+    </content>
+  </entry>
+  {%- endfor %}
+</feed>

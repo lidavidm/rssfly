@@ -1,4 +1,8 @@
+alembic==1.4.3
 beautifulsoup4==4.9.3
 Flask==1.1.2
+flask-sqlalchemy==2.4.4
 uWSGI==2.0.19.1
 requests==2.25.1
+sqlalchemy==1.3.22
+structlog==20.2.0
