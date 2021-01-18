@@ -40,6 +40,9 @@ class TappytoonExtractor(Extractor):
         chapters = {}
         chapter_data = data["props"]["initialState"]["entities"]["chapters"]
         for chapter in chapter_data.values():
+            if not chapter["isAccessible"]:
+                # Exclude "not yet"
+                continue
             chapter_id = "{:09}".format(chapter["order"])
             chapter_title = chapter["title"]
             chapter_url = f"https://www.tappytoon.com/en/chapters/{chapter['id']}"

@@ -48,7 +48,6 @@ def test_tappytoon():
     assert comic.publisher == "Tappytoon"
     assert comic.publisher == TappytoonExtractor().publisher
     assert comic.comic_id == comic_id
-    assert len(comic.chapters) == 43
-    print(comic.chapters)
-    assert comic.chapters[-1].chapter_id == "000000042"
-    assert comic.chapters[-1].name == "Episode 43"
+    assert len(comic.chapters) == 42
+    assert comic.chapters[-1].chapter_id == "000000041"
+    assert comic.chapters[-1].name == "Episode 42"
