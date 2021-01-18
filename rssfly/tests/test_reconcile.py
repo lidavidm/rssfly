@@ -21,7 +21,10 @@ from rssfly.reconcile import PublishedChapter, reconcile
 def test_reconcile():
     existing = [
         PublishedChapter(
-            chapter_id="1", name="Test", url="", published=datetime.datetime.now()
+            chapter_id="1",
+            name="Test",
+            url="",
+            published=datetime.datetime.now() + datetime.timedelta(seconds=-5),
         )
     ]
     chapters = [
@@ -34,8 +37,18 @@ def test_reconcile():
     expected = existing[:]
     expected.extend(
         [
-            PublishedChapter(chapter_id="2", name="Test 2", url="", published=now),
-            PublishedChapter(chapter_id="3", name="Test 3", url="", published=now),
+            PublishedChapter(
+                chapter_id="2",
+                name="Test 2",
+                url="",
+                published=now + datetime.timedelta(seconds=-2),
+            ),
+            PublishedChapter(
+                chapter_id="3",
+                name="Test 3",
+                url="",
+                published=now + datetime.timedelta(seconds=-1),
+            ),
         ]
     )
     assert expected == reconciled

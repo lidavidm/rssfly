@@ -38,10 +38,19 @@ def reconcile(
 ) -> List[PublishedChapter]:
     existing_ids = set(ch.chapter_id for ch in existing)
     new_chapters = existing[:]
+    added_chapters = []
     for chapter in current:
         if chapter.chapter_id in existing_ids:
             # TODO: maybe update details
             continue
+        added_chapters.append(chapter)
+    skew = len(added_chapters)
+    for chapter in added_chapters:
         # TODO: optional date from source?
-        new_chapters.append(PublishedChapter(published=now, **chapter._asdict()))
+        # Skew 'now' so that not all dates are the same
+        chapter_now = now + datetime.timedelta(seconds=-skew)
+        new_chapters.append(
+            PublishedChapter(published=chapter_now, **chapter._asdict())
+        )
+        skew -= 1
     return new_chapters
