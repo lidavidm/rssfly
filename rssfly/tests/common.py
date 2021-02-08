@@ -25,8 +25,12 @@ class FakeContext:
         # TODO: raise proper error
         return self._urls[url]
 
+    def get_bytes(self, url, **kwargs):
+        # TODO: raise proper error
+        return self._urls[url]
+
 
 def get_test_data(path: str) -> str:
     root = Path(os.environ.get("RSSFLY_TEST_DATA_ROOT", ".")) / path
-    with root.open() as f:
+    with root.open("rb") as f:
         return f.read()

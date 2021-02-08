@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package rssfly.extractor.mangaplus;
+
+message SeriesResponse {
+    Series series = 1;
+}
+
+message Series {
+    SeriesInner series = 8;
+}
+
+message SeriesInner {
+    SeriesDescription description = 1;
+    string thumb = 2;
+    string summary = 3;
+    string background = 4;
+    string unknown1 = 5;
+    string user_message = 7;
+    repeated Chapter chapters = 9;
+}
+
+message SeriesDescription {
+    int64 id = 1;
+    string title = 2;
+    string author = 3;
+    string thumb_portrait = 4;
+    string thumb_landscape = 5;
+    int64 unknown = 6;
+}
+
+message Chapter {
+    int64 series_id = 1;
+    int64 chapter_id = 2;
+    string number = 3;
+    string title = 4;
+    string thumbnail = 5;
+    int64 unknown1 = 6;
+    int64 unknown2 = 7;
+}

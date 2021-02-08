@@ -27,6 +27,11 @@ class Context:
         response.raise_for_status()
         return response.text
 
+    def get_bytes(self, *args, **kwargs):
+        response = self._session.get(*args, **kwargs)
+        response.raise_for_status()
+        return response.content
+
 
 class Chapter(NamedTuple):
     chapter_id: str

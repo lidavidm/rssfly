@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from rssfly.extractor.acqq import AcqqExtractor
+from rssfly.extractor.mangaplus import MangaplusExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.tests.common import FakeContext, get_test_data
 
@@ -22,7 +23,7 @@ def test_acqq():
     url = f"https://ac.qq.com/Comic/comicInfo/id/{comic_id}"
     context = FakeContext(
         {
-            url: get_test_data(f"acqq.{comic_id}.html"),
+            url: get_test_data(f"acqq.{comic_id}.html").decode(),
         }
     )
     comic = AcqqExtractor().extract(context, comic_id)
@@ -35,12 +36,30 @@ def test_acqq():
     assert comic.chapters[-1].name == "暗恋：暗恋20"
 
 
+def test_mangaplus():
+    comic_id = "100145"
+    url = f"https://jumpg-webapi.tokyo-cdn.com/api/title_detail?title_id={comic_id}"
+    context = FakeContext(
+        {
+            url: get_test_data(f"mangaplus.{comic_id}.bin"),
+        }
+    )
+    comic = MangaplusExtractor().extract(context, comic_id)
+    assert comic.name == "WITCH WATCH"
+    assert comic.publisher == "Shueisha MangaPlus"
+    assert comic.publisher == MangaplusExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 1
+    assert comic.chapters[-1].chapter_id == "000000001"
+    assert comic.chapters[-1].name == "1 Witch's Return"
+
+
 def test_tappytoon():
     comic_id = "villainess-turns-hourglass"
     url = f"https://www.tappytoon.com/en/comics/{comic_id}"
     context = FakeContext(
         {
-            url: get_test_data(f"tappytoon.{comic_id}.html"),
+            url: get_test_data(f"tappytoon.{comic_id}.html").decode(),
         }
     )
     comic = TappytoonExtractor().extract(context, comic_id)

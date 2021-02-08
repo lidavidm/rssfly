@@ -21,14 +21,18 @@ from flask import make_response, render_template
 
 import rssfly.model as model
 from rssfly.app import app
-from rssfly.extractor import acqq, tappytoon
+from rssfly.extractor import acqq, mangaplus, tappytoon
 from rssfly.extractor.common import Comic, Context
 from rssfly.reconcile import reconcile
 
 logger = structlog.get_logger(__name__)
 
 extractors = {}
-for instance in [acqq.AcqqExtractor(), tappytoon.TappytoonExtractor()]:
+for instance in [
+    acqq.AcqqExtractor(),
+    mangaplus.MangaplusExtractor(),
+    tappytoon.TappytoonExtractor(),
+]:
     extractors[instance.name] = instance
     logger.info("Registered extractor", name=instance.name)
 
