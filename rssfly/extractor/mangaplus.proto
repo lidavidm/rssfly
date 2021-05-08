@@ -18,6 +18,7 @@ message SeriesInner {
     string unknown1 = 5;
     string user_message = 7;
     repeated Chapter chapters = 9;
+    repeated Chapter latest_chapters = 10;
 }
 
 message SeriesDescription {

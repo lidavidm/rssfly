@@ -17,7 +17,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
     package="rssfly.extractor.mangaplus",
     syntax="proto3",
     serialized_options=None,
-    serialized_pb=b'\n rssfly/extractor/mangaplus.proto\x12\x1arssfly.extractor.mangaplus"D\n\x0eSeriesResponse\x12\x32\n\x06series\x18\x01 \x01(\x0b\x32".rssfly.extractor.mangaplus.Series"A\n\x06Series\x12\x37\n\x06series\x18\x08 \x01(\x0b\x32\'.rssfly.extractor.mangaplus.SeriesInner"\xe4\x01\n\x0bSeriesInner\x12\x42\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32-.rssfly.extractor.mangaplus.SeriesDescription\x12\r\n\x05thumb\x18\x02 \x01(\t\x12\x0f\n\x07summary\x18\x03 \x01(\t\x12\x12\n\nbackground\x18\x04 \x01(\t\x12\x10\n\x08unknown1\x18\x05 \x01(\t\x12\x14\n\x0cuser_message\x18\x07 \x01(\t\x12\x35\n\x08\x63hapters\x18\t \x03(\x0b\x32#.rssfly.extractor.mangaplus.Chapter"\x80\x01\n\x11SeriesDescription\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0e\n\x06\x61uthor\x18\x03 \x01(\t\x12\x16\n\x0ethumb_portrait\x18\x04 \x01(\t\x12\x17\n\x0fthumb_landscape\x18\x05 \x01(\t\x12\x0f\n\x07unknown\x18\x06 \x01(\x03"\x86\x01\n\x07\x43hapter\x12\x11\n\tseries_id\x18\x01 \x01(\x03\x12\x12\n\nchapter_id\x18\x02 \x01(\x03\x12\x0e\n\x06number\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x11\n\tthumbnail\x18\x05 \x01(\t\x12\x10\n\x08unknown1\x18\x06 \x01(\x03\x12\x10\n\x08unknown2\x18\x07 \x01(\x03\x62\x06proto3',
+    serialized_pb=b'\n rssfly/extractor/mangaplus.proto\x12\x1arssfly.extractor.mangaplus"D\n\x0eSeriesResponse\x12\x32\n\x06series\x18\x01 \x01(\x0b\x32".rssfly.extractor.mangaplus.Series"A\n\x06Series\x12\x37\n\x06series\x18\x08 \x01(\x0b\x32\'.rssfly.extractor.mangaplus.SeriesInner"\xa2\x02\n\x0bSeriesInner\x12\x42\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32-.rssfly.extractor.mangaplus.SeriesDescription\x12\r\n\x05thumb\x18\x02 \x01(\t\x12\x0f\n\x07summary\x18\x03 \x01(\t\x12\x12\n\nbackground\x18\x04 \x01(\t\x12\x10\n\x08unknown1\x18\x05 \x01(\t\x12\x14\n\x0cuser_message\x18\x07 \x01(\t\x12\x35\n\x08\x63hapters\x18\t \x03(\x0b\x32#.rssfly.extractor.mangaplus.Chapter\x12<\n\x0flatest_chapters\x18\n \x03(\x0b\x32#.rssfly.extractor.mangaplus.Chapter"\x80\x01\n\x11SeriesDescription\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05title\x18\x02 \x01(\t\x12\x0e\n\x06\x61uthor\x18\x03 \x01(\t\x12\x16\n\x0ethumb_portrait\x18\x04 \x01(\t\x12\x17\n\x0fthumb_landscape\x18\x05 \x01(\t\x12\x0f\n\x07unknown\x18\x06 \x01(\x03"\x86\x01\n\x07\x43hapter\x12\x11\n\tseries_id\x18\x01 \x01(\x03\x12\x12\n\nchapter_id\x18\x02 \x01(\x03\x12\x0e\n\x06number\x18\x03 \x01(\t\x12\r\n\x05title\x18\x04 \x01(\t\x12\x11\n\tthumbnail\x18\x05 \x01(\t\x12\x10\n\x08unknown1\x18\x06 \x01(\x03\x12\x10\n\x08unknown2\x18\x07 \x01(\x03\x62\x06proto3',
 )
 
 
@@ -232,6 +232,24 @@ _SERIESINNER = _descriptor.Descriptor(
             serialized_options=None,
             file=DESCRIPTOR,
         ),
+        _descriptor.FieldDescriptor(
+            name="latest_chapters",
+            full_name="rssfly.extractor.mangaplus.SeriesInner.latest_chapters",
+            index=7,
+            number=10,
+            type=11,
+            cpp_type=10,
+            label=3,
+            has_default_value=False,
+            default_value=[],
+            message_type=None,
+            enum_type=None,
+            containing_type=None,
+            is_extension=False,
+            extension_scope=None,
+            serialized_options=None,
+            file=DESCRIPTOR,
+        ),
     ],
     extensions=[],
     nested_types=[],
@@ -242,7 +260,7 @@ _SERIESINNER = _descriptor.Descriptor(
     extension_ranges=[],
     oneofs=[],
     serialized_start=202,
-    serialized_end=430,
+    serialized_end=492,
 )
 
 
@@ -370,8 +388,8 @@ _SERIESDESCRIPTION = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=433,
-    serialized_end=561,
+    serialized_start=495,
+    serialized_end=623,
 )
 
 
@@ -517,14 +535,15 @@ _CHAPTER = _descriptor.Descriptor(
     syntax="proto3",
     extension_ranges=[],
     oneofs=[],
-    serialized_start=564,
-    serialized_end=698,
+    serialized_start=626,
+    serialized_end=760,
 )
 
 _SERIESRESPONSE.fields_by_name["series"].message_type = _SERIES
 _SERIES.fields_by_name["series"].message_type = _SERIESINNER
 _SERIESINNER.fields_by_name["description"].message_type = _SERIESDESCRIPTION
 _SERIESINNER.fields_by_name["chapters"].message_type = _CHAPTER
+_SERIESINNER.fields_by_name["latest_chapters"].message_type = _CHAPTER
 DESCRIPTOR.message_types_by_name["SeriesResponse"] = _SERIESRESPONSE
 DESCRIPTOR.message_types_by_name["Series"] = _SERIES
 DESCRIPTOR.message_types_by_name["SeriesInner"] = _SERIESINNER

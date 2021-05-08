@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+import itertools
+
 import structlog
 
 from rssfly.extractor import mangaplus_pb2
@@ -38,8 +40,14 @@ class MangaplusExtractor(Extractor):
         response.ParseFromString(raw_bytes)
 
         chapters = {}
-        for chapter in response.series.series.chapters:
-            chapter_id = "{:09}".format(int(chapter.number.lstrip("#")))
+        for chapter in itertools.chain(
+            response.series.series.chapters, response.series.series.latest_chapters
+        ):
+            try:
+                chapter_id = "{:09}".format(int(chapter.number.lstrip("#")))
+            except ValueError:
+                # Oh god
+                chapter_id = chapter.number.rjust(9, "0")
             chapter_title = chapter.title
             chapter_url = (
                 f"https://mangaplus.shueisha.co.jp/viewer/{chapter.chapter_id}"
@@ -51,7 +59,7 @@ class MangaplusExtractor(Extractor):
                 url=chapter_url,
             )
         chapter_list = list(
-            sorted(chapters.values(), key=lambda chapter: int(chapter.chapter_id))
+            sorted(chapters.values(), key=lambda chapter: chapter.chapter_id)
         )
         return Comic(
             publisher=self.publisher,

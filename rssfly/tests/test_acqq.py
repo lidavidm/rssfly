@@ -54,6 +54,26 @@ def test_mangaplus():
     assert comic.chapters[-1].name == "1 Witch's Return"
 
 
+def test_mangaplus_timelimit():
+    comic_id = "100056"
+    url = f"https://jumpg-webapi.tokyo-cdn.com/api/title_detail?title_id={comic_id}"
+    context = FakeContext(
+        {
+            url: get_test_data(f"mangaplus.{comic_id}.bin"),
+        }
+    )
+    comic = MangaplusExtractor().extract(context, comic_id)
+    assert comic.name == "SPY x FAMILY"
+    assert comic.publisher == "Shueisha MangaPlus"
+    assert comic.publisher == MangaplusExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 6
+    assert comic.chapters[0].chapter_id == "000000001"
+    assert comic.chapters[0].name == "MISSION:1"
+    assert comic.chapters[-2].chapter_id == "000000045"
+    assert comic.chapters[-2].name == "MISSION: 45"
+
+
 def test_tappytoon():
     comic_id = "villainess-turns-hourglass"
     url = f"https://www.tappytoon.com/en/comics/{comic_id}"
