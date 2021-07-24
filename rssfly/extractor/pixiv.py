@@ -24,7 +24,7 @@ logger = structlog.get_logger(__name__)
 class PixivExtractor(Extractor):
     @property
     def name(self):
-        return "Pixiv"
+        return "pixiv"
 
     @property
     def publisher(self):
