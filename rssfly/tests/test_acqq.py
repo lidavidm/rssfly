@@ -14,6 +14,7 @@
 
 from rssfly.extractor.acqq import AcqqExtractor
 from rssfly.extractor.mangaplus import MangaplusExtractor
+from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.tests.common import FakeContext, get_test_data
 
@@ -72,6 +73,24 @@ def test_mangaplus_timelimit():
     assert comic.chapters[0].name == "MISSION:1"
     assert comic.chapters[-2].chapter_id == "000000045"
     assert comic.chapters[-2].name == "MISSION: 45"
+
+
+def test_sunday_webry():
+    comic_id = "5743"
+    url = f"https://www.sunday-webry.com/detail.php?title_id={comic_id}"
+    context = FakeContext(
+        {
+            url: get_test_data(f"sunday_webry.{comic_id}.html").decode(),
+        }
+    )
+    comic = SundayWebryExtractor().extract(context, comic_id)
+    assert comic.name == "ちょっとだけ抜けちゃう柊さん"
+    assert comic.publisher == "Shogakukan"
+    assert comic.publisher == SundayWebryExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 4
+    assert comic.chapters[-1].chapter_id == "000000005"
+    assert comic.chapters[-1].name == "第5話"
 
 
 def test_tappytoon():
