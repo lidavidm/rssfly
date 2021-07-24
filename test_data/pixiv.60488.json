@@ -1,0 +1,775 @@
+{
+  "error": false,
+  "message": "",
+  "body": {
+    "tagTranslation": {
+      "漫画": {
+        "en": "manga",
+        "ko": "만화",
+        "zh": "",
+        "zh_tw": "漫畫",
+        "romaji": "mannga"
+      },
+      "オリジナル": {
+        "en": "original",
+        "ko": "창작",
+        "zh": "原创",
+        "zh_tw": "原創",
+        "romaji": "orijinaru"
+      },
+      "現実もたまには嘘をつく": {
+        "romaji": "riarumotamanihausowotsuku"
+      },
+      "ゲーム好きの友達と色々する話": {
+        "en": "",
+        "ko": "게임을 좋아하는 친구와 여러가지를 하는 이야기",
+        "zh": "",
+        "zh_tw": "",
+        "romaji": "ge-muzukinotomodachitoiroirosuruhanashi"
+      },
+      "オリジナル7500users入り": {
+        "en": "original 7,500+ bookmarks",
+        "ko": "",
+        "zh": "原创7500收藏",
+        "zh_tw": "",
+        "romaji": "orijinarunanasenngohyakuyu-za-zuiri"
+      },
+      "創作男女": {
+        "en": "original male and female characters",
+        "ko": "",
+        "zh": "原创男女角色",
+        "zh_tw": "",
+        "romaji": "sousakudannjo"
+      },
+      "筋肉痛": {
+        "romaji": "kinnnikutsuu"
+      },
+      "お前も家族だ": {
+        "romaji": "omaemokazokuda"
+      },
+      "卵焼き": {
+        "romaji": "tamagoyaki"
+      },
+      "やさしいせかい": {
+        "romaji": "yasashiisekai"
+      },
+      "オリジナル10000users入り": {
+        "en": "original 10000+ bookmarks",
+        "ko": "창작 10000명 북마크",
+        "zh": "原创10000users加入书籤",
+        "zh_tw": "原創10000users加入書籤",
+        "romaji": "orijinaruichimannyu-za-zuiri"
+      },
+      "ゴールイン": {
+        "romaji": "go-ruinn"
+      },
+      "朝帰り": {
+        "romaji": "asagaeri"
+      },
+      "青春マイスターにいち": {
+        "romaji": "seishunnmaisuta-niichi"
+      },
+      "優しい嘘": {
+        "romaji": "yasashiiuso"
+      },
+      "添い寝": {
+        "en": "sleeping together",
+        "ko": "",
+        "zh": "陪睡",
+        "zh_tw": "",
+        "romaji": "soine"
+      },
+      "衝撃の事実": {
+        "romaji": "shougekinojijitsu"
+      },
+      "地獄への道は善意で舗装されている": {
+        "en": "the road to hell is paved with good intentions",
+        "ko": "",
+        "zh": "",
+        "zh_tw": "",
+        "romaji": "jigokuhenomichihazennidehosousareteiru"
+      },
+      "オリジナル5000users入り": {
+        "en": "original 5000+ bookmarks",
+        "ko": "",
+        "zh": "原创5000users加入书籤",
+        "zh_tw": "原創5000users加入書籤",
+        "romaji": "orijinarugosennyu-za-zuiri"
+      }
+    },
+    "thumbnails": {
+      "illust": [
+        {
+          "id": "91330005",
+          "title": "現実もたまには嘘をつく92「ならなくていいのよ」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/07/18/18/01/16/91330005_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "現実もたまには嘘をつく",
+            "ゲーム好きの友達と色々する話",
+            "16年作り続ける前提",
+            "あなたはあなたでいいのよ",
+            "妻になる気は満々",
+            "悠久の共同作業",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1223,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく92「ならなくていいのよ」 / July 18th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-07-18T18:01:16+09:00",
+          "updateDate": "2021-07-18T18:01:16+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "91172234",
+          "title": "現実もたまには嘘をつく91「母さんの身長なんだ」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/07/11/18/00/36/91172234_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "実質プロポーズ",
+            "あなたに会えて本当に良かった",
+            "いつまでも女装は似合うと思う",
+            "いつか訪れる未来の約束",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1183,
+          "pageCount": 5,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく91「母さんの身長なんだ」 / July 11th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-07-11T18:00:36+09:00",
+          "updateDate": "2021-07-11T18:00:36+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "90848398",
+          "title": "現実もたまには嘘をつく90「料理が美味しくできた日は」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/06/27/18/01/16/90848398_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "(愛が)染みてる〜!",
+            "通い妻の胃袋を掴む話",
+            "押しかけ女房と出迎え妻",
+            "オリジナル7500users入り",
+            "創作男女"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1215,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks, original male and female characters / 現実もたまには嘘をつく90「料理が美味しくできた日は」",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-06-27T18:01:16+09:00",
+          "updateDate": "2021-06-27T18:01:16+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "90688399",
+          "title": "現実もたまには嘘をつく89「男の子が苦手だった」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/06/20/18/03/19/90688399_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "男の娘は平気",
+            "に“いぃぃぃちぃぃぃぃ",
+            "筋肉痛",
+            "性別:薫",
+            "オリジナル7500users入り",
+            "筋肉は嘘つかなかったよ…"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1381,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく89「男の子が苦手だった」 / June 20th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-06-20T18:03:19+09:00",
+          "updateDate": "2021-06-20T18:03:19+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "90368314",
+          "title": "現実もたまには嘘をつく88「考えさせられるレースでしたね」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/06/06/18/14/22/90368314_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "お義母さん",
+            "二人三脚とは",
+            "「えっ」の三段活用",
+            "お前も家族だ",
+            "親子二人一脚",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1169,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく88「考えさせられるレースでしたね」 / June 6th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-06-06T18:00:47+09:00",
+          "updateDate": "2021-06-06T18:14:22+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "90201491",
+          "title": "現実もたまには嘘をつく87「大人の幸せがあるように」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/05/30/18/32/42/90201491_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "現実もたまには嘘をつく",
+            "ゲーム好きの友達と色々する話",
+            "卵焼き",
+            "昼食デート",
+            "大人の幸せ子供の幸せ",
+            "やさしいせかい",
+            "オリジナル10000users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1145,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 10000+ bookmarks / 現実もたまには嘘をつく87「大人の幸せがあるように」 / May 30th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-05-30T18:00:08+09:00",
+          "updateDate": "2021-05-30T18:32:42+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "90041482",
+          "title": "現実もたまには嘘をつく86「ばかたれ」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/05/23/18/03/54/90041482_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "仲良し女子五人組",
+            "ゴールイン",
+            "リア充がリア充にげんなりする話",
+            "オリジナル7500users入り",
+            "ばかたれっ"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1159,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく86「ばかたれ」 / May 23rd, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-05-23T18:00:27+09:00",
+          "updateDate": "2021-05-23T18:03:54+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "89882233",
+          "title": "現実もたまには嘘をつく85「いつもお世話になっています」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/05/16/18/00/47/89882233_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "お母さんはお見通し",
+            "母力",
+            "母もたまには噓をつく",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1075,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく85「いつもお世話になっています」 / May 16th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-05-16T18:00:47+09:00",
+          "updateDate": "2021-05-16T18:00:47+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "89767813",
+          "title": "現実もたまには嘘をつく84「カツ丼食べていいですか」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/05/11/18/18/50/89767813_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "朝帰り",
+            "青春マイスターにいち",
+            "さりげない飯テロ",
+            "取り調べにはカツ丼",
+            "フリーダム委員長",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1191,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく84「カツ丼食べていいですか」 / May 11th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-05-11T18:00:38+09:00",
+          "updateDate": "2021-05-11T18:18:50+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "89543356",
+          "title": "現実もたまには嘘をつく83「おやすみなさい」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/05/02/18/00/16/89543356_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "ゲーム好きの友達と色々する話",
+            "オリジナル",
+            "現実もたまには嘘をつく",
+            "優しい嘘",
+            "添い寝",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1278,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, sleeping together, original 7,500+ bookmarks / 現実もたまには嘘をつく83「おやすみなさい」",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-05-02T18:00:16+09:00",
+          "updateDate": "2021-05-02T18:00:16+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "89385038",
+          "title": "現実もたまには嘘をつく82「気が向いたらね」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/04/25/18/01/29/89385038_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "オリジナル7500users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1386,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 7,500+ bookmarks / 現実もたまには嘘をつく82「気が向いたらね」 / April 25th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-04-25T18:01:29+09:00",
+          "updateDate": "2021-04-25T18:01:29+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "89234680",
+          "title": "現実もたまには嘘をつく81「ならいいけど」",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/04/18/18/00/20/89234680_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "ゲーム好きの友達と色々する話",
+            "現実もたまには嘘をつく",
+            "これはもう家族",
+            "流れるような負傷…!",
+            "誉め処を分かってる薫",
+            "家庭の味、確立",
+            "オリジナル10000users入り",
+            "履修"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1057,
+          "pageCount": 4,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, original 10000+ bookmarks / 現実もたまには嘘をつく81「ならいいけど」 / April 18th, 2021",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-04-18T18:00:20+09:00",
+          "updateDate": "2021-04-18T18:00:20+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "60488",
+          "seriesTitle": "現実もたまには嘘をつく",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        },
+        {
+          "id": "91008940",
+          "title": "地獄の沙汰も歌しだい",
+          "illustType": 1,
+          "xRestrict": 0,
+          "restrict": 0,
+          "sl": 2,
+          "url": "https://i.pximg.net/c/250x250_80_a2/img-master/img/2021/07/04/18/02/02/91008940_p0_square1200.jpg",
+          "description": "",
+          "tags": [
+            "漫画",
+            "オリジナル",
+            "少女アラカルト",
+            "衝撃の事実",
+            "ヨシキ君終了のお知らせ",
+            "人生の墓場へようこそ",
+            "ぎゃおーっ",
+            "地獄への道は善意で舗装されている",
+            "娘の彼氏をGotoHell",
+            "オリジナル5000users入り"
+          ],
+          "userId": "1035047",
+          "userName": "にいち",
+          "width": 800,
+          "height": 1184,
+          "pageCount": 5,
+          "isBookmarkable": true,
+          "bookmarkData": null,
+          "alt": "original, the road to hell is paved with good intentions, original 5000+ bookmarks / 地獄の沙汰も歌しだい",
+          "titleCaptionTranslation": {
+            "workTitle": "",
+            "workCaption": ""
+          },
+          "createDate": "2021-07-04T18:02:02+09:00",
+          "updateDate": "2021-07-04T18:02:02+09:00",
+          "isUnlisted": false,
+          "isMasked": false,
+          "seriesId": "718",
+          "seriesTitle": "少女アラカルト",
+          "profileImageUrl": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg"
+        }
+      ],
+      "novel": [],
+      "novelDraft": []
+    },
+    "illustSeries": [
+      {
+        "id": "60488",
+        "userId": "1035047",
+        "title": "現実もたまには嘘をつく",
+        "description": "ネットゲームで知り合った薫を、女の子だと誤解していた七海。お父さん（娘に近づく男絶対なぎ倒すマン）の魔の手（？）から逃れるため、薫は女装して女の子になりきることに。果たして薫の努力は報われるのか！？",
+        "caption": "ネットゲームで知り合った薫を、女の子だと誤解していた七海。お父さん（娘に近づく男絶対なぎ倒すマン）の魔の手（？）から逃れるため、薫は女装して女の子になりきることに。果たして薫の努力は報われるのか！？",
+        "total": 100,
+        "content_order": null,
+        "url": "https://i.pximg.net/c/782x410_80_a2_g2/img-master/img/2021/07/18/18/01/16/91330005_p0_master1200.jpg",
+        "coverImageSl": 2,
+        "firstIllustId": "70035405",
+        "latestIllustId": "91330005",
+        "createDate": "2019-07-07T18:09:12+09:00",
+        "updateDate": "2021-07-18T18:01:16+09:00",
+        "watchCount": null
+      },
+      {
+        "id": "718",
+        "userId": "1035047",
+        "title": "少女アラカルト",
+        "description": "",
+        "caption": "",
+        "total": 63,
+        "content_order": null,
+        "url": "https://i.pximg.net/c/782x410_80_a2_g2/img-master/img/2021/07/04/18/02/02/91008940_p0_master1200.jpg",
+        "coverImageSl": 2,
+        "firstIllustId": "50256492",
+        "latestIllustId": "91008940",
+        "createDate": "2017-06-18T18:04:30+09:00",
+        "updateDate": "2021-07-04T18:02:02+09:00",
+        "watchCount": null
+      }
+    ],
+    "novelSeries": [],
+    "requests": [],
+    "users": [
+      {
+        "partial": 0,
+        "comment": "気ままに絵や漫画を描いています。\r\nメッセージは種々の事情からご返答できないケースもございますのであらかじめご了承ください。",
+        "followedBack": false,
+        "userId": "1035047",
+        "name": "にいち",
+        "image": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_50.jpg",
+        "imageBig": "https://i.pximg.net/user-profile/img/2014/12/24/01/03/48/8754002_6892c6cc3e5452afd1412f01a07d3775_170.jpg",
+        "premium": true,
+        "isFollowed": false,
+        "isMypixiv": false,
+        "isBlocking": false,
+        "background": null,
+        "acceptRequest": false
+      }
+    ],
+    "page": {
+      "series": [
+        {
+          "workId": "91330005",
+          "order": 100
+        },
+        {
+          "workId": "91172234",
+          "order": 99
+        },
+        {
+          "workId": "90848398",
+          "order": 98
+        },
+        {
+          "workId": "90688399",
+          "order": 97
+        },
+        {
+          "workId": "90368314",
+          "order": 96
+        },
+        {
+          "workId": "90201491",
+          "order": 95
+        },
+        {
+          "workId": "90041482",
+          "order": 94
+        },
+        {
+          "workId": "89882233",
+          "order": 93
+        },
+        {
+          "workId": "89767813",
+          "order": 92
+        },
+        {
+          "workId": "89543356",
+          "order": 91
+        },
+        {
+          "workId": "89385038",
+          "order": 90
+        },
+        {
+          "workId": "89234680",
+          "order": 89
+        }
+      ],
+      "isSetCover": false,
+      "seriesId": 60488,
+      "otherSeriesId": "718",
+      "recentUpdatedWorkIds": [
+        91330005,
+        91172234,
+        91008940,
+        90848398
+      ],
+      "total": 100,
+      "isWatched": false
+    },
+    "extraData": {
+      "meta": {
+        "title": "\"現実もたまには嘘をつく\"/\"にいち\" Series [pixiv]",
+        "description": "The manga series \"現実もたまには嘘をつく\" has a total of 100 works posted. Create an account on pixiv to like にいち's works! Interact with them by liking or commenting on their works and sending them a message.",
+        "canonical": "https://www.pixiv.net/user/1035047/series/60488",
+        "ogp": {
+          "type": "article",
+          "title": "\"現実もたまには嘘をつく\"/\"にいち\" Series [pixiv]",
+          "description": "ネットゲームで知り合った薫を、女の子だと誤解していた七海。お父さん（娘に近づく男絶対なぎ倒すマン）の魔の手（？）から逃れるため、薫は女装して女の子になりきることに。果たして薫の努力は報われるのか！？",
+          "image": "https://i.pximg.net/c/240x126_80_a2_g2/img-master/img/2021/07/18/18/01/16/91330005_p0_master1200.jpg"
+        },
+        "twitter": {
+          "card": "summary_large_image",
+          "site": "@pixiv",
+          "title": "現実もたまには嘘をつく",
+          "description": "ネットゲームで知り合った薫を、女の子だと誤解していた七海。お父さん（娘に近づく男絶対なぎ倒すマン）の魔の手（？）から逃れるため、薫は女装して女の子になりきることに。果たして薫の努力は報われるのか！？",
+          "image": "https://i.pximg.net/c/240x126_80_a2_g2/img-master/img/2021/07/18/18/01/16/91330005_p0_master1200.jpg"
+        }
+      }
+    },
+    "zoneConfig": {
+      "header": {
+        "url": "https://pixon.ads-pixiv.net/show?zone_id=header&format=js&s=0&up=0&ng=g&l=en&uri=%2Fajax%2Fseries%2F_PARAM_&is_spa=1&ab_test_digits_first=71&uab=&yuid=V4kSUVA&suid=Pgsrs095ku1aquc4y&num=60fb6b09656"
+      },
+      "footer": {
+        "url": "https://pixon.ads-pixiv.net/show?zone_id=footer&format=js&s=0&up=0&ng=g&l=en&uri=%2Fajax%2Fseries%2F_PARAM_&is_spa=1&ab_test_digits_first=71&uab=&yuid=V4kSUVA&suid=Pgsrs095kwpx9ms90&num=60fb6b09518"
+      },
+      "responsive": {
+        "url": "https://pixon.ads-pixiv.net/show?zone_id=illust_responsive&format=js&s=0&up=0&ng=g&l=en&uri=%2Fajax%2Fseries%2F_PARAM_&is_spa=1&ab_test_digits_first=71&uab=&yuid=V4kSUVA&suid=Pgsrs095ky6i44mri&num=60fb6b09269"
+      },
+      "rectangle": {
+        "url": "https://pixon.ads-pixiv.net/show?zone_id=illust_rectangle&format=js&s=0&up=0&ng=g&l=en&uri=%2Fajax%2Fseries%2F_PARAM_&is_spa=1&ab_test_digits_first=71&uab=&yuid=V4kSUVA&suid=Pgsrs095kzkgkfhx0&num=60fb6b09979"
+      }
+    }
+  }
+}

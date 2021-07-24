@@ -14,6 +14,7 @@
 
 from rssfly.extractor.acqq import AcqqExtractor
 from rssfly.extractor.mangaplus import MangaplusExtractor
+from rssfly.extractor.pixiv import PixivExtractor
 from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.tests.common import FakeContext, get_test_data
@@ -73,6 +74,25 @@ def test_mangaplus_timelimit():
     assert comic.chapters[0].name == "MISSION:1"
     assert comic.chapters[-2].chapter_id == "000000045"
     assert comic.chapters[-2].name == "MISSION: 45"
+
+
+def test_pixiv():
+    comic_id = "60488"
+    url = f"https://www.pixiv.net/ajax/series/{comic_id}?p=1&lang=en"
+    context = FakeContext(
+        {
+            url: get_test_data(f"pixiv.{comic_id}.json").decode(),
+        }
+    )
+    comic = PixivExtractor().extract(context, comic_id)
+    assert comic.name == "現実もたまには嘘をつく"
+    assert comic.publisher == "Pixiv"
+    assert comic.publisher == PixivExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 12
+    assert comic.chapters[-1].chapter_id == "000091330005"
+    assert comic.chapters[-1].name == "現実もたまには嘘をつく92「ならなくていいのよ」"
+    assert comic.chapters[-1].url == "https://www.pixiv.net/en/artworks/91330005"
 
 
 def test_sunday_webry():
