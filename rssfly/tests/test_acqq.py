@@ -15,6 +15,7 @@
 from rssfly.extractor.acqq import AcqqExtractor
 from rssfly.extractor.mangaplus import MangaplusExtractor
 from rssfly.extractor.pixiv import PixivExtractor
+from rssfly.extractor.pixiv_fanbox import FanboxExtractor
 from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.tests.common import FakeContext, get_test_data
@@ -36,6 +37,25 @@ def test_acqq():
     assert len(comic.chapters) == 25
     assert comic.chapters[-1].chapter_id == "000000025"
     assert comic.chapters[-1].name == "暗恋：暗恋20"
+
+
+def test_fanbox():
+    comic_id = "niichi021"
+    url = f"https://api.fanbox.cc/post.listCreator?creatorId={comic_id}&limit=10"
+    context = FakeContext(
+        {
+            url: get_test_data(f"fanbox.{comic_id}.json").decode(),
+        }
+    )
+    comic = FanboxExtractor().extract(context, comic_id)
+    assert comic.name == "にいち’s Fanbox"
+    assert comic.publisher == "Fanbox"
+    assert comic.publisher == FanboxExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 10
+    assert comic.chapters[-1].chapter_id == "000002751947"
+    assert comic.chapters[-1].name == "【ちょっとだけ先読み】現実もたまには嘘をつく98"
+    assert comic.chapters[-1].url == "https://niichi021.fanbox.cc/posts/2751947"
 
 
 def test_mangaplus():

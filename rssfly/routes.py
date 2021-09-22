@@ -21,7 +21,14 @@ from flask import make_response, render_template
 
 import rssfly.model as model
 from rssfly.app import app
-from rssfly.extractor import acqq, mangaplus, pixiv, sunday_webry, tappytoon
+from rssfly.extractor import (
+    acqq,
+    mangaplus,
+    pixiv,
+    pixiv_fanbox,
+    sunday_webry,
+    tappytoon,
+)
 from rssfly.extractor.common import Comic, Context
 from rssfly.reconcile import reconcile
 
@@ -32,6 +39,7 @@ for instance in [
     acqq.AcqqExtractor(),
     mangaplus.MangaplusExtractor(),
     pixiv.PixivExtractor(),
+    pixiv_fanbox.FanboxExtractor(),
     sunday_webry.SundayWebryExtractor(),
     tappytoon.TappytoonExtractor(),
 ]:
