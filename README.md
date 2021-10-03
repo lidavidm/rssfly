@@ -6,8 +6,10 @@ Similar to [RSS Box][rssbox], but focused on manga/manhua/manhwa.
 ## Supported Sites
 
 - 腾讯动漫官方网站 (a manhua site run by Tencent)
+- ComicWalker (a Japanese manga site from the publisher Kadokawa)
 - MangaPlus (official English translations of Japanese manga from the publisher Shueisha)
 - Pixiv (a Japanese art and webcomics site with a mix of official and fan-published comics)
+- Pixiv Fanbox (a Patreon-like offshoot of Pixiv)
 - Sunday Webry (“Sunday Web Every”, a Japanese manga site from the publisher Shogakukan)
 - Tappytoon (official English translations of Korean web comics)
 

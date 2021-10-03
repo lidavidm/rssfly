@@ -13,6 +13,7 @@
 # limitations under the License.
 
 from rssfly.extractor.acqq import AcqqExtractor
+from rssfly.extractor.comic_walker import ComicWalkerExtractor
 from rssfly.extractor.mangaplus import MangaplusExtractor
 from rssfly.extractor.pixiv import PixivExtractor
 from rssfly.extractor.pixiv_fanbox import FanboxExtractor
@@ -37,6 +38,28 @@ def test_acqq():
     assert len(comic.chapters) == 25
     assert comic.chapters[-1].chapter_id == "000000025"
     assert comic.chapters[-1].name == "暗恋：暗恋20"
+
+
+def test_comic_walker():
+    comic_id = "KDCW_KS13202228010000_68"
+    url = f"https://comic-walker.com/contents/detail/{comic_id}"
+    context = FakeContext(
+        {
+            url: get_test_data(f"comic_walker.{comic_id}.html").decode(),
+        }
+    )
+    comic = ComicWalkerExtractor().extract(context, comic_id)
+    assert comic.name == "クラスの大嫌いな女子と結婚することになった。"
+    assert comic.publisher == "Kadokawa"
+    assert comic.publisher == ComicWalkerExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 9
+    assert comic.chapters[-1].chapter_id == "第5話-2"
+    assert comic.chapters[-1].name == "クラスの大嫌いな女子と結婚することになった。 第5話-2"
+    assert (
+        comic.chapters[-1].url
+        == "https://comic-walker.com/viewer/?tw=2&dlcl=ja&cid=KDCW_KS13202228010009_68"
+    )
 
 
 def test_fanbox():

@@ -23,6 +23,7 @@ import rssfly.model as model
 from rssfly.app import app
 from rssfly.extractor import (
     acqq,
+    comic_walker,
     mangaplus,
     pixiv,
     pixiv_fanbox,
@@ -37,6 +38,7 @@ logger = structlog.get_logger(__name__)
 extractors = {}
 for instance in [
     acqq.AcqqExtractor(),
+    comic_walker.ComicWalkerExtractor(),
     mangaplus.MangaplusExtractor(),
     pixiv.PixivExtractor(),
     pixiv_fanbox.FanboxExtractor(),
