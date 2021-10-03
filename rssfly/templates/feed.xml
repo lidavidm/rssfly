@@ -7,7 +7,7 @@
   <entry>
     <author><name>{{ comic.publisher }}</name></author>
     <title>{{ chapter.name }}</title>
-    <link href="{{ chapter.url | safe }}" />
+    <link href="{{ chapter.url }}" />
     <id>{{ chapter.url }}</id>
     <updated>{{ chapter.published.isoformat() }}Z</updated>
     <content>
