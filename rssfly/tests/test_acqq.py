@@ -115,8 +115,11 @@ def test_mangaplus_timelimit():
     assert len(comic.chapters) == 6
     assert comic.chapters[0].chapter_id == "000000001"
     assert comic.chapters[0].name == "MISSION:1"
-    assert comic.chapters[-2].chapter_id == "000000045"
-    assert comic.chapters[-2].name == "MISSION: 45"
+    assert comic.chapters[-1].chapter_id == "001010076"
+    assert comic.chapters[-1].name == "Special Illustration 5"
+    assert comic.chapters[-2].chapter_id == "000000053"
+    assert comic.chapters[-2].name == "MISSION 53"
+    print(comic.chapters)
 
 
 def test_pixiv():

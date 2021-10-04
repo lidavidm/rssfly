@@ -46,8 +46,10 @@ class MangaplusExtractor(Extractor):
             try:
                 chapter_id = "{:09}".format(int(chapter.number.lstrip("#")))
             except ValueError:
-                # Oh god
-                chapter_id = chapter.number.rjust(9, "0")
+                # One of the "special illustrations". Just use the API chapter
+                # number. (For consistency for other chapters though, we use
+                # the generated chapter number from above)
+                chapter_id = "{:09}".format(int(chapter.chapter_id))
             chapter_title = chapter.title
             chapter_url = (
                 f"https://mangaplus.shueisha.co.jp/viewer/{chapter.chapter_id}"
