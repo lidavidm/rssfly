@@ -35,7 +35,7 @@ class Twi4Extractor(Extractor):
     def extract(self, context: Context, comic_id: str) -> Comic:
         url = f"https://sai-zen-sen.jp/comics/twi4/{comic_id}/"
         logger.info("Fetching from sai-zen-sen.jp", url=url)
-        raw_text = context.get_text(url)
+        raw_text = context.get_bytes(url).decode("utf-8")
         root = BeautifulSoup(raw_text, features="html.parser")
         chapters = {}
         for chapter_el in root.find(id="backnumbers").find_all("li"):

@@ -73,12 +73,11 @@ def feed(extractor, comic_id):
             chapters=reconciled,
         )
         model.save_comic(comic)
-    response = make_response(
-        render_template(
-            "feed.xml",
-            comic=comic,
-            latest=max(comic.chapters, key=lambda chapter: chapter.published),
-        )
+    rendered = render_template(
+        "feed.xml",
+        comic=comic,
+        latest=max(comic.chapters, key=lambda chapter: chapter.published),
     )
+    response = make_response(rendered)
     response.headers["Content-Type"] = "application/atom+xml"
     return response
