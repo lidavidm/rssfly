@@ -12,5 +12,6 @@ Similar to [RSS Box][rssbox], but focused on manga/manhua/manhwa.
 - Pixiv Fanbox (a Patreon-like offshoot of Pixiv)
 - Sunday Webry (“Sunday Web Every”, a Japanese manga site from the publisher Shogakukan)
 - Tappytoon (official English translations of Korean web comics)
+- Twi4 (a Japanese manga site from the publisher Saizensen, focused on the *4-koma* style)
 
 [rssbox]: https://github.com/stefansundin/rssbox

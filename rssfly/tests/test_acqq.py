@@ -19,6 +19,7 @@ from rssfly.extractor.pixiv import PixivExtractor
 from rssfly.extractor.pixiv_fanbox import FanboxExtractor
 from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
+from rssfly.extractor.twi4 import Twi4Extractor
 from rssfly.tests.common import FakeContext, get_test_data
 
 
@@ -175,3 +176,21 @@ def test_tappytoon():
     assert len(comic.chapters) == 42
     assert comic.chapters[-1].chapter_id == "000000041"
     assert comic.chapters[-1].name == "Episode 42"
+
+
+def test_twi4():
+    comic_id = "nekonote"
+    url = f"https://sai-zen-sen.jp/comics/twi4/{comic_id}/"
+    context = FakeContext(
+        {
+            url: get_test_data(f"twi4.{comic_id}.html").decode(),
+        }
+    )
+    comic = Twi4Extractor().extract(context, comic_id)
+    assert comic.name == "猫の手だって役に立つ"
+    assert comic.publisher == "Saizensen"
+    assert comic.publisher == Twi4Extractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 11
+    assert comic.chapters[-1].chapter_id == "000000000011"
+    assert comic.chapters[-1].name == "NOBEL『癖』 #0011"
