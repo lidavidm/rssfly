@@ -183,7 +183,7 @@ def test_twi4():
     url = f"https://sai-zen-sen.jp/comics/twi4/{comic_id}/"
     context = FakeContext(
         {
-            url: get_test_data(f"twi4.{comic_id}.html").decode(),
+            url: get_test_data(f"twi4.{comic_id}.html"),
         }
     )
     comic = Twi4Extractor().extract(context, comic_id)
