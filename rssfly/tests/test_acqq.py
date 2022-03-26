@@ -17,7 +17,6 @@ from rssfly.extractor.comic_walker import ComicWalkerExtractor
 from rssfly.extractor.mangaplus import MangaplusExtractor
 from rssfly.extractor.pixiv import PixivExtractor
 from rssfly.extractor.pixiv_fanbox import FanboxExtractor
-from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.extractor.twi4 import Twi4Extractor
 from rssfly.extractor.webnewtype import ComicNewtypeExtractor
@@ -188,24 +187,6 @@ def test_pixiv():
     assert comic.chapters[-1].chapter_id == "000091330005"
     assert comic.chapters[-1].name == "現実もたまには嘘をつく92「ならなくていいのよ」"
     assert comic.chapters[-1].url == "https://www.pixiv.net/en/artworks/91330005"
-
-
-def test_sunday_webry():
-    comic_id = "5743"
-    url = f"https://www.sunday-webry.com/detail.php?title_id={comic_id}"
-    context = FakeContext(
-        {
-            url: get_test_data(f"sunday_webry.{comic_id}.html").decode(),
-        }
-    )
-    comic = SundayWebryExtractor().extract(context, comic_id)
-    assert comic.name == "ちょっとだけ抜けちゃう柊さん"
-    assert comic.publisher == "Shogakukan"
-    assert comic.publisher == SundayWebryExtractor().publisher
-    assert comic.comic_id == comic_id
-    assert len(comic.chapters) == 4
-    assert comic.chapters[-1].chapter_id == "000000005"
-    assert comic.chapters[-1].name == "第5話"
 
 
 def test_tappytoon():
