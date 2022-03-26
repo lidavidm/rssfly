@@ -30,6 +30,7 @@ from rssfly.extractor import (
     sunday_webry,
     tappytoon,
     twi4,
+    webnewtype,
 )
 from rssfly.extractor.common import Comic, Context
 from rssfly.reconcile import reconcile
@@ -46,6 +47,7 @@ for instance in [
     sunday_webry.SundayWebryExtractor(),
     tappytoon.TappytoonExtractor(),
     twi4.Twi4Extractor(),
+    webnewtype.ComicNewtypeExtractor(),
 ]:
     extractors[instance.name] = instance
     logger.info("Registered extractor", name=instance.name)

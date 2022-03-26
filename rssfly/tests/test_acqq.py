@@ -20,6 +20,7 @@ from rssfly.extractor.pixiv_fanbox import FanboxExtractor
 from rssfly.extractor.sunday_webry import SundayWebryExtractor
 from rssfly.extractor.tappytoon import TappytoonExtractor
 from rssfly.extractor.twi4 import Twi4Extractor
+from rssfly.extractor.webnewtype import ComicNewtypeExtractor
 from rssfly.tests.common import FakeContext, get_test_data
 
 
@@ -60,6 +61,53 @@ def test_comic_walker():
     assert (
         comic.chapters[-1].url
         == "https://comic-walker.com/viewer/?tw=2&dlcl=ja&cid=KDCW_KS13202228010009_68"
+    )
+
+
+def test_comic_newtype():
+    comic_id = "watatsuyo"
+    series_url = f"https://comic.webnewtype.com/contents/{comic_id}/"
+    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/"
+    context = FakeContext(
+        {
+            series_url: get_test_data(f"newtype.{comic_id}.html").decode(),
+            url: get_test_data(f"newtype.{comic_id}.json").decode(),
+        }
+    )
+    comic = ComicNewtypeExtractor().extract(context, comic_id)
+    assert comic.name == "私より強い男と結婚したいの"
+    assert comic.publisher == "Kadokawa"
+    assert comic.publisher == ComicNewtypeExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 1
+    assert comic.chapters[-1].chapter_id == "000001001"
+    assert comic.chapters[-1].name == "第01話"
+    assert (
+        comic.chapters[-1].url
+        == "https://comic.webnewtype.com/contents/watatsuyo/1001/"
+    )
+
+
+def test_comic_newtype_longer():
+    comic_id = "fuzoroi"
+    series_url = f"https://comic.webnewtype.com/contents/{comic_id}/"
+    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/"
+    context = FakeContext(
+        {
+            series_url: get_test_data(f"newtype.{comic_id}.html").decode(),
+            url: get_test_data(f"newtype.{comic_id}.json").decode(),
+        }
+    )
+    comic = ComicNewtypeExtractor().extract(context, comic_id)
+    assert comic.name == "不揃いの連理"
+    assert comic.publisher == "Kadokawa"
+    assert comic.publisher == ComicNewtypeExtractor().publisher
+    assert comic.comic_id == comic_id
+    assert len(comic.chapters) == 18
+    assert comic.chapters[-1].chapter_id == "000000170"
+    assert comic.chapters[-1].name == "第十七話"
+    assert (
+        comic.chapters[-1].url == "https://comic.webnewtype.com/contents/fuzoroi/170/"
     )
 
 
