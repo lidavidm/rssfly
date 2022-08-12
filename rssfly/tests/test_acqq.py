@@ -66,7 +66,7 @@ def test_comic_walker():
 def test_comic_newtype():
     comic_id = "watatsuyo"
     series_url = f"https://comic.webnewtype.com/contents/{comic_id}/"
-    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/"
+    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/Dsc/"
     context = FakeContext(
         {
             series_url: get_test_data(f"newtype.{comic_id}.html").decode(),
@@ -78,19 +78,18 @@ def test_comic_newtype():
     assert comic.publisher == "Kadokawa"
     assert comic.publisher == ComicNewtypeExtractor().publisher
     assert comic.comic_id == comic_id
-    assert len(comic.chapters) == 1
-    assert comic.chapters[-1].chapter_id == "000001001"
-    assert comic.chapters[-1].name == "第01話"
+    assert len(comic.chapters) == 5
+    assert comic.chapters[0].chapter_id == "000001001"
+    assert comic.chapters[0].name == "第01話"
     assert (
-        comic.chapters[-1].url
-        == "https://comic.webnewtype.com/contents/watatsuyo/1001/"
+        comic.chapters[0].url == "https://comic.webnewtype.com/contents/watatsuyo/1001/"
     )
 
 
 def test_comic_newtype_longer():
     comic_id = "fuzoroi"
     series_url = f"https://comic.webnewtype.com/contents/{comic_id}/"
-    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/"
+    url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/Dsc/"
     context = FakeContext(
         {
             series_url: get_test_data(f"newtype.{comic_id}.html").decode(),
@@ -102,11 +101,11 @@ def test_comic_newtype_longer():
     assert comic.publisher == "Kadokawa"
     assert comic.publisher == ComicNewtypeExtractor().publisher
     assert comic.comic_id == comic_id
-    assert len(comic.chapters) == 18
-    assert comic.chapters[-1].chapter_id == "000000170"
-    assert comic.chapters[-1].name == "第十七話"
+    assert len(comic.chapters) == 22
+    assert comic.chapters[-1].chapter_id == "000000210"
+    assert comic.chapters[-1].name == "第二十一話"
     assert (
-        comic.chapters[-1].url == "https://comic.webnewtype.com/contents/fuzoroi/170/"
+        comic.chapters[-1].url == "https://comic.webnewtype.com/contents/fuzoroi/210/"
     )
 
 

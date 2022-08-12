@@ -14,6 +14,7 @@
 
 import json
 import urllib.parse
+from pathlib import Path
 
 import structlog
 from bs4 import BeautifulSoup
@@ -34,7 +35,7 @@ class ComicNewtypeExtractor(Extractor):
 
     def extract(self, context: Context, comic_id: str) -> Comic:
         series_url = f"https://comic.webnewtype.com/contents/{comic_id}/"
-        url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/"
+        url = f"https://comic.webnewtype.com/contents/{comic_id}/more/1/Dsc/"
         logger.info(
             "Fetching from comic.webnewtype.com", series_url=series_url, url=url
         )
@@ -43,10 +44,14 @@ class ComicNewtypeExtractor(Extractor):
 
         chapters = {}
         root = BeautifulSoup(payload["html"], features="html.parser")
-        for el in root.find_all("li"):
-            chapter_title = el.find(class_="number").text
-            chapter_url = urllib.parse.urljoin(url, el.find("a").attrs["href"])
-            _, _, raw_id = el.attrs["id"].partition("_")
+        for el in root.children:
+            if isinstance(el, str):
+                continue
+            chapter_title = el.find("h2").text
+            relative_url = el.find("a").attrs["href"]
+            chapter_url = urllib.parse.urljoin(url, relative_url)
+            raw_id = Path(relative_url).stem
+
             chapter_id = "{:09}".format(int(raw_id))
             # Deduplicate by URL
             chapters[chapter_url] = Chapter(
