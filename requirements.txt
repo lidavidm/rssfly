@@ -3,7 +3,7 @@ beautifulsoup4==4.11.1
 environs==9.5.0
 Flask==2.3.2
 flask-sqlalchemy==2.5.1
-gunicorn==20.1.0
+gunicorn==22.0.0
 protobuf==4.21.6
 requests==2.31.0
 SQLAlchemy==1.4.39
